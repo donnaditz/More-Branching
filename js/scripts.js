@@ -56,4 +56,39 @@ $(document).ready(function(){
 
     event.preventDefault();
   });
+
+  //Triangle Tracker Project
+  $("form#triangle").submit(function(event){
+    var length1 = parseInt($("input#length1").val());
+    var length2 = parseInt($("input#length2").val());
+    var length3 = parseInt($("input#length3").val());
+
+    if(length1 && length2 && length3){
+      if (length1 === length2 && length1 === length3 && length2 === length3) {
+        $("#triangle-answer").empty().append("Equilateral").show();
+
+      } else if (length1 === length2 && length1 !== length3 && length2 !== length3) {
+        $("#triangle-answer").empty().append("Isosceles");
+
+      } else if (length1 !== length2 && length1 !== length3 && length2 === length3) {
+        $("#triangle-answer").empty().append("Isosceles");
+
+      } else if (length1 !== length2 && length1 === length3 && length2 !== length3) {
+        $("#triangle-answer").empty().append("Isosceles");
+
+      } else if (length1 !== length2 && length1 !== length3 && length2 !== length3) {
+        $("#triangle-answer").empty().append("Scalene");
+
+    }
+
+
+    //} else if (length1 + length2 <= length3 && length1 + length3 <= length2 && length2 + length3 <= length1) {
+    //  $("#triangle-answer").empty().append("NOT a Triangle");
+
+    } else {
+      $("#triangle-answer").empty().append("NOT a Triangle");
+    }
+
+    event.preventDefault();
+  });
 });
