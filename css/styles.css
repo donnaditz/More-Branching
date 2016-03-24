@@ -9,3 +9,6 @@ div.row {
 h1 {
   text-align: center;
 }
+#political-result {
+  display: none;
+}

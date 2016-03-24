@@ -36,7 +36,43 @@
       </form>
 
       <div id="your-date">
-        <p>You will <span id="celebrity"></span>. </p>
+        <h2>You will <span id="celebrity"></span>. </h2>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <h1>Project: Political Views</h1>
+      <h2>Find Out Your Beliefs</h2>
+
+      <p>To find out your political beliefs, answer the questions:</p>
+
+      <form id="political-view">
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="question1">Do you support gun rights?</label>
+            <select id="question1" class="form-control">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+
+            </select>
+          </div>
+
+          <div class="col-xs-6">
+            <label for="question2">Do you support legalized marijuana?</label>
+            <select id="question2" class="form-control">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+
+            </select>
+          </div>
+
+        </div>
+          <button type="submit" class="btn btn-success">Find my political belief</button>
+
+      </form>
+
+      <div id="political-result">
+        <h2>You are <span id="political-answer"></span>. </h2>
       </div>
     </div>
   </body>
