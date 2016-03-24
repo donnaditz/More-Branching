@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //Celebrity Dating Project
+  //Celebrity Dating Project ------------------------
   $("form#about-you").submit(function(event){
     var age = parseInt($("input#age").val());
     var gender = $("select#gender").val();
@@ -28,7 +28,7 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
-  //Political View Project
+  //Political View Project ------------------------
   $("form#political-view").submit(function(event){
     var answer1 = $("select#question1").val();
     var answer2 = $("select#question2").val();
@@ -57,7 +57,7 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
-  //Triangle Tracker Project
+  //Triangle Tracker Project ------------------------
   $("form#triangle").submit(function(event){
     var length1 = parseInt($("input#length1").val());
     var length2 = parseInt($("input#length2").val());
@@ -66,7 +66,6 @@ $(document).ready(function(){
     if(length1 && length2 && length3){
       if (length1 === length2 && length1 === length3 && length2 === length3) {
         $("#triangle-answer").empty().append("Equilateral").show();
-
       } else if (length1 === length2 && length1 !== length3 && length2 !== length3) {
         $("#triangle-answer").empty().append("Isosceles");
 
@@ -78,12 +77,7 @@ $(document).ready(function(){
 
       } else if (length1 !== length2 && length1 !== length3 && length2 !== length3) {
         $("#triangle-answer").empty().append("Scalene");
-
-    }
-
-
-    //} else if (length1 + length2 <= length3 && length1 + length3 <= length2 && length2 + length3 <= length1) {
-    //  $("#triangle-answer").empty().append("NOT a Triangle");
+      }
 
     } else {
       $("#triangle-answer").empty().append("NOT a Triangle");
