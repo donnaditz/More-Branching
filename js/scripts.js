@@ -64,8 +64,12 @@ $(document).ready(function(){
     var length3 = parseInt($("input#length3").val());
 
     if(length1 && length2 && length3){
-      if (length1 === length2 && length1 === length3 && length2 === length3) {
+      if (length1 + length2 <= length3 || length1 + length3 <= length2 || length2 + length3 <= length1) {
+        $("#triangle-answer").empty().append("Not a triangle").show();
+
+      } else if (length1 === length2 && length1 === length3 && length2 === length3) {
         $("#triangle-answer").empty().append("Equilateral").show();
+
       } else if (length1 === length2 && length1 !== length3 && length2 !== length3) {
         $("#triangle-answer").empty().append("Isosceles");
 
@@ -80,7 +84,7 @@ $(document).ready(function(){
       }
 
     } else {
-      $("#triangle-answer").empty().append("NOT a Triangle");
+      $("#triangle-answer").empty().append("Try again");
     }
 
     event.preventDefault();
