@@ -4,18 +4,18 @@ $(document).ready(function(){
     var age = parseInt($("input#age").val());
     var gender = $("select#gender").val();
 
-    if (age > 35 && gender === "male") {
+    if (age > 25 && gender === "male") {
         var name = "date Jessica Alba";
 
       $("#celebrity").empty().append(name);
       $("#your-date").show();
-    } else if (age > 35 && gender === "female") {
+    } else if (age > 25 && gender === "female") {
         var name = "date Channing Tatum";
 
       $("#celebrity").empty().append(name);
       $("#your-date").show();
 
-    } else if (age > 35 && gender === "other") {
+    } else if (age > 25 && gender === "other") {
           var name = "date Jessica Alba and Channing Tatum";
 
         $("#celebrity").empty().append(name);
@@ -85,6 +85,24 @@ $(document).ready(function(){
 
     } else {
       $("#triangle-answer").empty().append("Try again");
+    }
+
+    event.preventDefault();
+  });
+
+  //Movie character Project ------------------------
+  $("form#about-you2").submit(function(event){
+    var character = $("input:radio[name=starwars]:checked").val();
+
+    if (character === "starwars1") {
+      $("#character-result").empty().append("You are Luke Skywalker");
+
+    } else if (character === "starwars2") {
+      $("#character-result").empty().append("You are Darth Vader");
+
+    } else  {
+      $("#character-result").empty().append("You are Han Solo");
+
     }
 
     event.preventDefault();
